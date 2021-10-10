@@ -1,18 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 # Import Splinter, BeautifulSoup, and Pandas
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
 import datetime as dt
 from webdriver_manager.chrome import ChromeDriverManager
-
-
-# In[2]:
 
 
 def scrape_all():
@@ -34,9 +25,6 @@ def scrape_all():
     # Stop webdriver and return data
     browser.quit()
     return data
-
-
-# In[3]:
 
 
 def mars_news(browser):
@@ -67,9 +55,6 @@ def mars_news(browser):
     return news_title, news_p
 
 
-# In[4]:
-
-
 def featured_image(browser):
     # Visit URL
     url = 'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/index.html'
@@ -95,10 +80,6 @@ def featured_image(browser):
     img_url = f'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/{img_url_rel}'
 
     return img_url
-
-
-# In[5]:
-
 
 def mars_facts():
     # Add try/except for error handling
